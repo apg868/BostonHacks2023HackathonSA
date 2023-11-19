@@ -1,8 +1,7 @@
 from django.views.decorators.csrf import csrf_exempt
 import json
 from django.http import JsonResponse
-from .utils import textScrapeAll
-from analyzer import semantic_analyzer
+from .utils import textScrapeAll, analyzer
 
 @csrf_exempt  # Disable CSRF protection for this view only
 def scrape_stock_data(request):
@@ -17,7 +16,7 @@ def scrape_stock_data(request):
                 'error': 'No data found for ticker. Please try again.'
             })
         else:
-            NLP_result = semantic_analyzer(scraped_data)
+            NLP_result = analyzer(scraped_data)
             json_string = json.dumps(NLP_result)
-            return JsonResponse(json_string, safe=False)
+            return JsonResponse(NLP_result)
 

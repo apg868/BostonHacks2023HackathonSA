@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
+import {Button} from '@chakra-ui/react';
 
 const StockDataFetcher = () => {
     const [ticker, setTicker] = useState('');
@@ -61,7 +62,15 @@ const StockDataFetcher = () => {
     if (data || error) {
         return (
             <div>
-                {data && <div><pre>{JSON.stringify(data, null, 2)}</pre></div>}
+                {data && (
+                    <div>
+                        <div> ALL VECTORS TIME: {data.all_vectors} </div>
+                        <div>Your average vector is: {data.avg_vector}</div>
+                        <div> Your num_pos is: {data.num_pos}</div>
+                        <div> Your num_neg is: {data.num_neg} </div>
+                        <pre>{JSON.stringify(data, null, 2)}</pre>
+                    </div>
+                )}
                 {error && <div style={{ color: 'red' }}>{error}</div>}
                 <button onClick={resetForm}>Try Another Ticker</button>
             </div>
