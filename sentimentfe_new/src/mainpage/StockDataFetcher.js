@@ -73,15 +73,15 @@ const StockDataFetcher = () => {
                           <HStack spacing="2rem">
                             <Box bg="white" opacity="0.7" border="1px" color="black" borderColor="white" w="200px" padding="0.75rem" 
                                  fontFamily="inter, sans-serif" fontWeight="medium" borderRadius="0.5rem" textAlign="center">
-                              {data.pos_prob * 100}% of articles likely positive
+                              {Math.round(data.pos_prob * 100)}% of articles likely positive
                             </Box>
                             <Box bg="white" opacity="0.7" border="1px" color="black" borderColor="white" w="200px" padding="0.75rem" 
                                  fontFamily="inter, sans-serif" fontWeight="medium" borderRadius="0.5rem" textAlign="center">
-                              {data.neg_prob * 100}% of articles likely negative
+                              {Math.round(data.neg_prob * 100)}% of articles likely negative
                             </Box>
                             <Box bg="white" opacity="0.7" border="1px" color="black" borderColor="white" w="200px" padding="0.75rem" 
                                  fontFamily="inter, sans-serif" fontWeight="medium" borderRadius="0.5rem" textAlign="center">
-                              {data.neut_prob * 100}% of articles likely neutral
+                              {Math.round(data.neut_prob * 100)}% of articles likely neutral
                             </Box>
                           </HStack>
                           <HStack spacing="2rem">
