@@ -1,0 +1,55 @@
+# Ignore virtual environment files (if using virtualenv)
+venv/
+__pycache__/
+
+# Ignore database files
+*.sqlite3
+db.sqlite3
+
+# Ignore generated files
+*.pyc
+*.pyo
+__pycache__/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Ignore logs and other dynamic files
+*.log
+*.pot
+*.pyc
+*.sw[a-z]
+*.bak
+*.tmp
+
+# Ignore media and user-uploaded files (customize this if needed)
+media/
+uploads/
+
+# Ignore secret settings (customize this if needed)
+secret_settings.py
+
+# Ignore local development settings
+local_settings.py
+
+# Ignore static files collected during development
+static/
+
+# Ignore environment-specific configuration
+.env
+
+# Ignore IDE and editor-specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Ignore dependencies (use a requirements.txt or similar instead)
+__pycache__/
+node_modules/
+*.lock
+*.log
