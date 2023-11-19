@@ -6,6 +6,8 @@ from urllib.parse import urljoin
 import os
 import torch
 import numpy as np
+import time
+from newspaper import Article
 
 # Semantic model
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
@@ -143,13 +145,53 @@ def textScrape(link):
     return finText
 
 
+def scrape_google(tic):
+  tic_upper = tic.upper()
+  if tic_upper in nasdaq_ticker_set:
+      # Create a Google News search URL
+      google_news_url = f"https://news.google.com/search?q='{tic_upper}'%20stock%20news+when:7d&ceid=US:en&hl=en-US&gl=US"
+
+      # Online parsing with headers and sleep
+      headers = {'User-Agent': 'Your-User-Agent-Here'}
+      page = requests.get(google_news_url, headers=headers).text
+      time.sleep(0.5)  # Sleep for 0.5 seconds to avoid rapid requests
+
+      # Create an object to scrape various data later
+      soup = BeautifulSoup(page, 'html.parser')
+
+      # Extract links from Google News
+      base_url = 'https://news.google.com/'
+      links_from_google_news = [urljoin(base_url, i.get('href')) for i in soup.select('article .DY5T1d.RZIKme')]
+
+      body_texts = set()
+      for index, link in enumerate(links_from_google_news):
+          if index > 30:
+            break
+          # Use Newspaper3k to get article information
+          article = Article(link)
+          try:
+              article.download()
+              article.parse()
+
+              # Extract relevant information from the article
+              body_texts.add(article.text)
+          except Exception as e:
+              continue
+
+      return list(body_texts)
+
 def textScrapeAll(tic):
-   links = search_links(tic)
-   if links == None:
-       return None
-   i = 0
-   textList = [""] * len(links)
-   while(i<len(links)):
-      textList[i] = textScrape(links[i])
-      i += 1
-   return textList
+    links = search_links(tic)
+    if links == None:
+        return None
+    i = 0
+    textList = [""] * len(links)
+    while(i<len(links)):
+        textList[i] = textScrape(links[i])
+        i += 1
+
+    extra_text = scrape_google(tic)
+    if extra_text:
+        textList.extend(extra_text)
+
+    return textList

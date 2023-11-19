@@ -107,7 +107,7 @@ const StockDataFetcher = () => {
                         <Box bg="white" opacity="0.7" border="1px" borderColor="white" w="300px" h="75px" padding="0.75rem" borderRadius="0.5rem"
                             display="flex" alignItems="center" justifyContent="center"
                             fontFamily="inter, sans-serif" fontWeight="medium">
-                        Overall Rating: {data.overall_pred}
+                        Overall Rating: {data.overall_pred == 2 ? "Neutral" : data.overall_pred == 1 ? "Negative": "Positive"}
 </Box>
                           </HStack>
                         </VStack>
