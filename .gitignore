@@ -1,3 +1,8 @@
 # Ignore virtual environment files (if using virtualenv)
 myenv/
 __pycache__/
+
+
+./sentimentfe/node_modules
+./sentimentfe/package-lock.json
+./sentimentfe/package.json
