@@ -2,14 +2,7 @@ from django.views.decorators.csrf import csrf_exempt
 import json
 from django.http import JsonResponse
 from .utils import textScrapeAll
-import random
-
-def mock_nlp_model(scraped_data):
-    if (scraped_data == None):
-        return {'confidence': 'ERROR: Invalid ticker submitted. Please try again.'}
-    else:
-        confidence_score = random.uniform(0.5, 1.0)
-        return {'confidence': confidence_score}
+from analyzer import semantic_analyzer
 
 @csrf_exempt  # Disable CSRF protection for this view only
 def scrape_stock_data(request):
@@ -19,15 +12,12 @@ def scrape_stock_data(request):
         ticker = data.get('ticker')
 
         scraped_data = textScrapeAll(ticker)
-        nlp_result = mock_nlp_model(scraped_data)
-        if(scraped_data == None):
+        if not scraped_data:
             return JsonResponse({
-            'confidence': nlp_result['confidence'],
-            'websites_analyzed': 0
+                'error': 'No data found for ticker. Please try again.'
             })
         else:
-            return JsonResponse({
-                'confidence': nlp_result['confidence'],
-                'websites_analyzed': len(scraped_data),
-            })
+            NLP_result = semantic_analyzer(scraped_data)
+            json_string = json.dumps(NLP_result)
+            return JsonResponse(json_string, safe=False)
 
