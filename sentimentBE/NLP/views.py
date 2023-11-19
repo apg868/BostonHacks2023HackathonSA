@@ -5,7 +5,7 @@ from .utils import textScrapeAll
 import random
 
 def mock_nlp_model(scraped_data):
-    if scraped_data == None:
+    if (scraped_data == None):
         return {'confidence': 'ERROR: Invalid ticker submitted. Please try again.'}
     else:
         confidence_score = random.uniform(0.5, 1.0)
@@ -20,9 +20,14 @@ def scrape_stock_data(request):
 
         scraped_data = textScrapeAll(ticker)
         nlp_result = mock_nlp_model(scraped_data)
-
-        return JsonResponse({
+        if(scraped_data == None):
+            return JsonResponse({
             'confidence': nlp_result['confidence'],
-            'websites_analyzed': len(scraped_data),
-        })
+            'websites_analyzed': 0
+            })
+        else:
+            return JsonResponse({
+                'confidence': nlp_result['confidence'],
+                'websites_analyzed': len(scraped_data),
+            })
 
