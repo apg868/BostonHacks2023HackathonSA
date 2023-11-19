@@ -9,7 +9,6 @@ function LoadingPage() {
   const gifStyle = {
     filter: "saturate(70%)", // Reduce saturation to 50%
     opacity: 0.9, // Set opacity to 80%
-    
   };
 
   return (
@@ -19,8 +18,8 @@ function LoadingPage() {
         <Image
           borderRadius="1rem"
           border = "gray"
-          w="20rem"
-          h="20rem"
+          w="25rem"
+          h="25rem"
           src={graph}
           alt="Graph"
           style={gifStyle} // Apply the styles to the Image component
