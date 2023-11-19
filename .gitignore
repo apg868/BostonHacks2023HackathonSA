@@ -6,3 +6,4 @@ __pycache__/
 ./sentimentfe/node_modules
 ./sentimentfe/package-lock.json
 ./sentimentfe/package.json
+node_modules
