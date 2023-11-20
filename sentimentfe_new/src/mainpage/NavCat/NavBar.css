@@ -1,0 +1,30 @@
+.navbar {
+    width: 100%;
+    background-color: #333; /* Change as per your color scheme */
+    overflow: hidden;
+    height: 50px; /* Adjust the height of the navbar */
+  }
+  
+  .ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .ticker {
+    display: flex;
+    white-space: nowrap;
+    animation: ticker 30s linear infinite; /* Adjust the timing as needed */
+  }
+  
+  .ticker__item {
+    padding: 0 2rem; /* Spacing between items */
+    color: white; /* Text color */
+    line-height: 50px; /* Vertically center the text in the navbar */
+  }
+  
+  /* Keyframes for the scrolling animation */
+  @keyframes ticker {
+    0%   { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+  }
+  

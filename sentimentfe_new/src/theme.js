@@ -14,10 +14,7 @@ const breakpoints = createBreakpoints({
 const themeProv = extendTheme({
   breakpoints,
   fonts: {
-    primaryFont: "'Roboto', sans-serif",
-    secondaryFont: "'Jost', sans-serif",
-    bannerFont: "'Roboto Mono', sans-serif", //not available in all weights
-    specialFont1: "'Orbitron', sans-serif",//only available in 400, 500
+    primaryFont: "'Inter, sans-serif"
   },
   fontWeights: {
     thin: 100,
@@ -27,10 +24,10 @@ const themeProv = extendTheme({
     bold: 700,
   },
   colors: {
-    primaryRed: "rgb(198, 18, 31)",
-    secondaryRed: "rgb(136, 7, 8)",
-    primaryGray: "rgb(218, 218, 218)",
-    secondaryGray: "rgb(219,219,219)"
+    colorPrimary: "rgb(198, 18, 31)",
+    colorSecondary: "rgb(224,224,224)",
+    buttonPrimary: "rgb(153, 204, 255)",
+    buttonSecondary: "rgb(218, 218, 218)",
   }
 });
 

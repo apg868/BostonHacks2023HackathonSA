@@ -100,26 +100,8 @@ def search_links(tics):
         for index, names in enumerate(titles):
             if len(names) >= 55:
                 titles[index] = names[0:55]
-                
         return links
 
-        '''# Let's turn all relative URLs into absolute URLs by iterating all links
-        base_url = 'https://news.google.com/'
-        for i in soup.select('article .DY5T1d.RZIKme'):
-            ss = urljoin(base_url, i.get('href'))
-            # Put all absolute links into an empty list
-            links.append(ss)
-
-        titles2 = []
-        links2 = []
-        for index, name in enumerate(titles):
-            # Create new lists to make sure we don't have repeats in the data set
-            if name not in titles2:
-                titles2.append(name)
-                links2.append(links[index])
-
-        return links2
-    '''
     else:
         print(f"Invalid ticker: {tics}")
         return None
@@ -165,7 +147,8 @@ def scrape_google(tic):
 
       body_texts = set()
       for index, link in enumerate(links_from_google_news):
-          if index > 30:
+          #if index > 30:
+          if index > 2:
             break
           # Use Newspaper3k to get article information
           article = Article(link)
