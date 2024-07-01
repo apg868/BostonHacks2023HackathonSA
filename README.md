@@ -5,15 +5,14 @@ We first held a vote on the multiple ideas we generated during the brainstorming
 ## Challenges we ran into
 We had to try multiple attempts to successfully use the machine learning algorithms and to accurately scrape the web and news sites. An additional challenge was runtime as there was much we could do about it except lower the amount of inputs and speed up the code where we could, during the testing phase.
 ## Accomplishments that we're proud of
-We're proud of our perseverance throughout this challenge we all didn't sleep so were working essentially 24 hours straight and were working with things we had never used and yet we were still able to make a really cool functioning design. 
+We're proud of our perseverance throughout this challenge we all didn't sleep so were working essentially 24 hours straight and were working with things we had never used and yet we were still able to make a really cool functioning design, winning runner-up best financial hack!
 ## What we learned
 We learned a wide range of things, what are the best models for analyzing financial text, how to scrape the web effectively, how to do the back end of a website, and how to make complicated data appear presentable
 ## What's next for TradeTone
 We hope to expand the number of websites that we search through so that we can have broader sets of data in order to be more accurate in our analysis. We would also like to start storing the data over time so we can begin to see larger trends in opinions toward stocks and provide that information to the user. 
 
+
+![ss1](https://github.com/apg868/BostonHacks2023HackathonSA/assets/123202954/3ed8c220-3271-4c89-a942-13dc8cf734e4)
 ![ss2](https://github.com/apg868/BostonHacks2023HackathonSA/assets/123202954/46b127ba-254c-4aef-b304-8fe529a2ef2d)
 ![ss3](https://github.com/apg868/BostonHacks2023HackathonSA/assets/123202954/f2600fed-336f-44a6-beec-0714ce836f72)
-![slide1](https://github.com/apg868/BostonHacks2023HackathonSA/assets/123202954/b05e07f8-aa95-4ee9-b2ae-eabcbbd0157e)
-![slide2](https://github.com/apg868/BostonHacks2023HackathonSA/assets/123202954/1203f3bd-41e5-4aa9-8f60-85a32a6ba649)
-![slide3](https://github.com/apg868/BostonHacks2023HackathonSA/assets/123202954/63594e61-b3e3-4821-9797-595427bc10bf)
-![ss1](https://github.com/apg868/BostonHacks2023HackathonSA/assets/123202954/3ed8c220-3271-4c89-a942-13dc8cf734e4)
+![team1](https://github.com/apg868/BostonHacks2023HackathonSA/assets/123202954/b58ab066-d6c5-42de-a65b-796658ba5629)
