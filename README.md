@@ -11,3 +11,9 @@ We learned a wide range of things, what are the best models for analyzing financ
 ## What's next for TradeTone
 We hope to expand the number of websites that we search through so that we can have broader sets of data in order to be more accurate in our analysis. We would also like to start storing the data over time so we can begin to see larger trends in opinions toward stocks and provide that information to the user. 
 
+![ss2](https://github.com/apg868/BostonHacks2023HackathonSA/assets/123202954/46b127ba-254c-4aef-b304-8fe529a2ef2d)
+![ss3](https://github.com/apg868/BostonHacks2023HackathonSA/assets/123202954/f2600fed-336f-44a6-beec-0714ce836f72)
+![slide1](https://github.com/apg868/BostonHacks2023HackathonSA/assets/123202954/b05e07f8-aa95-4ee9-b2ae-eabcbbd0157e)
+![slide2](https://github.com/apg868/BostonHacks2023HackathonSA/assets/123202954/1203f3bd-41e5-4aa9-8f60-85a32a6ba649)
+![slide3](https://github.com/apg868/BostonHacks2023HackathonSA/assets/123202954/63594e61-b3e3-4821-9797-595427bc10bf)
+![ss1](https://github.com/apg868/BostonHacks2023HackathonSA/assets/123202954/3ed8c220-3271-4c89-a942-13dc8cf734e4)
